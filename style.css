@@ -1,0 +1,130 @@
+/* 🎨 Genel Sayfa Ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Hafif gri arka plan */
+}
+
+/* 🏠 Header (Üst Kısım) Ayarları */
+header {
+    background-color: #a5a1a1; /* Header arka plan rengi */
+    color: white; /* Yazı rengi beyaz */
+    padding: 15px 0;
+}
+
+/* 📌 Header İçeriğini Düzenleyen Kapsayıcı */
+.container {
+    display: flex;
+    justify-content: space-between; /* Logo solda, menü sağda */
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* 🎯 Logo ve Başlık */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Logo ve yazı arasında boşluk */
+    cursor: pointer; /* El simgesi */
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 22px;
+    cursor: pointer; /* Yazıya da el simgesi eklenmiş oldu */
+}
+
+/* 📌 Menü Düzeni */
+.menu ul {
+    display: flex;
+    gap: 20px; /* Menü öğeleri arasında boşluk */
+    list-style: none; /* Noktaları kaldır */
+    margin: 0;
+    padding: 0;
+}
+
+/* Menü bağlantıları */
+.menu ul li a {
+    text-decoration: none; /* Altı çizgiyi kaldır */
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    display: inline-block; /* Sadece yazı kadar alan kaplasın */
+    cursor: pointer; /* Sadece yazının üstüne gelince el simgesi çıksın */
+    transition: 0.3s ease-in-out; /* Hover efekti için geçiş süresi */
+}
+
+/* Hover efekti */
+.menu ul li a:hover {
+    background-color: #555; /* Üzerine gelince renk değiştir */
+    border-radius: 5px; /* Hafif yuvarlak kenarlar */
+}
+
+/* 📌 Menü Öğelerinin Kayarak Gelmesi */
+.menu ul li {
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(-10px); /* Yukarıda başlasın */
+    transition: all 0.5s ease-in-out; /* Animasyon efekti */
+}
+
+/* 📌 Teknoloji Kaydırma Alanı */
+.tech-slider {
+    width: 100%;
+    overflow: hidden;
+    background-color: #222; /* Arka plan */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Teknoloji Öğelerini İçeren Kısım */
+.slider {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+}
+
+/* Teknoloji İsimleri için Animasyon */
+.slider span {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: #333;
+    border-radius: 5px;
+}
+/* 🏃‍♂️ Sağdan Sola Hareket Eden Animasyon */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%); /* Ekranın dışından başlasın */
+    }
+    to {
+        transform: translateX(-100%); /* Ekranın dışına çıksın */
+    }
+}
+
+/* 🎥 Teknoloji İsmi Kaydırma Efekti */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Menü ve diğer içeriğin KAYBOLMAMASI için */
+.menu, .container {
+    opacity: 1 !important;
+    transform: none !important;
+}
